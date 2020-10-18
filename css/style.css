@@ -1,0 +1,297 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.wrapper {
+  background: url("../images/pattern-curve.svg") no-repeat left bottom/75%;
+  overflow: hidden;
+}
+
+.testimonial {
+  margin: auto;
+  padding: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  max-width: 50rem;
+}
+
+.testimonial__slider {
+  padding: 3.5rem;
+  padding-top: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../images/pattern-bg.svg") no-repeat top center/contain;
+}
+
+.testimonial__photo {
+  font-size: 0;
+}
+
+.testimonial__photo img {
+  width: 100%;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 0 2.5rem 2rem -1.5rem rgba(32, 32, 70, 0.2);
+          box-shadow: 0 2.5rem 2rem -1.5rem rgba(32, 32, 70, 0.2);
+}
+
+.testimonial__controls {
+  margin-top: -2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8rem;
+  border-radius: 10rem;
+  background: white;
+  -webkit-box-shadow: 0 1rem 2rem rgba(32, 32, 70, 0.2);
+          box-shadow: 0 1rem 2rem rgba(32, 32, 70, 0.2);
+}
+
+.testimonial__controls button {
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+  background-color: white;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  z-index: 1;
+}
+
+.testimonial__controls button:hover {
+  background-color: #ededf2;
+}
+
+.testimonial__controls button:focus {
+  outline: none;
+  background-color: white;
+}
+
+.testimonial__controls button:nth-child(1) {
+  background-image: url("../images/icon-prev.svg");
+  border-top-left-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+}
+
+.testimonial__controls button:nth-child(2) {
+  background-image: url("../images/icon-next.svg");
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+}
+
+.testimonial__quote {
+  padding-top: 2.5rem;
+  text-align: center;
+  color: #202046;
+  background: url("../images/pattern-quotes.svg") no-repeat center top/18%;
+}
+
+.testimonial__quote > p {
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  line-height: 135%;
+}
+
+.testimonial__quote footer {
+  font-size: 1.5rem;
+  color: #babacf;
+}
+
+.testimonial__quote footer cite {
+  display: block;
+  font-weight: 700;
+  font-style: unset;
+  color: #202046;
+}
+
+@media (orientation: landscape) {
+  .testimonial {
+    max-width: unset;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+  }
+  .testimonial__slider {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+  }
+  .testimonial__quote {
+    text-align: left;
+    background-position: 19% 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial__quote > p {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    background-size: auto;
+  }
+  .testimonial {
+    padding: 0;
+    max-width: 129rem;
+  }
+  .testimonial__slider {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 54%;
+            flex: 0 0 54%;
+    padding: 6.8rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .testimonial__controls {
+    width: 11rem;
+    margin-left: 6rem;
+    margin-top: -2.75rem;
+  }
+  .testimonial__controls button {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  .testimonial__quote {
+    margin-left: 9rem;
+    margin-right: -13rem;
+    padding: 6rem 0 2.5rem;
+    z-index: 1;
+  }
+  .testimonial__quote > p {
+    margin-bottom: 4rem;
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .testimonial__quote footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 2rem;
+  }
+  .testimonial__quote footer cite {
+    margin-right: 1rem;
+  }
+}
+
+@-webkit-keyframes animation-right-in {
+  0% {
+    -webkit-transform: translateX(5rem) scale(0.95);
+            transform: translateX(5rem) scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes animation-right-in {
+  0% {
+    -webkit-transform: translateX(5rem) scale(0.95);
+            transform: translateX(5rem) scale(0.95);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animation-left-in {
+  0% {
+    -webkit-transform: translateX(-5rem) scale(0.95);
+            transform: translateX(-5rem) scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes animation-left-in {
+  0% {
+    -webkit-transform: translateX(-5rem) scale(0.95);
+            transform: translateX(-5rem) scale(0.95);
+    opacity: 0;
+  }
+}
+
+.right-in {
+  -webkit-animation: animation-right-in 0.3s;
+          animation: animation-right-in 0.3s;
+}
+
+.left-in {
+  -webkit-animation: animation-left-in 0.3s;
+          animation: animation-left-in 0.3s;
+}
+
+@-webkit-keyframes animation-right-out {
+  100% {
+    -webkit-transform: translateX(5rem) scale(0.95);
+            transform: translateX(5rem) scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes animation-right-out {
+  100% {
+    -webkit-transform: translateX(5rem) scale(0.95);
+            transform: translateX(5rem) scale(0.95);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animation-left-out {
+  100% {
+    -webkit-transform: translateX(-5rem) scale(0.95);
+            transform: translateX(-5rem) scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes animation-left-out {
+  100% {
+    -webkit-transform: translateX(-5rem) scale(0.95);
+            transform: translateX(-5rem) scale(0.95);
+    opacity: 0;
+  }
+}
+
+.right-out {
+  -webkit-animation: animation-right-out 0.3s;
+          animation: animation-right-out 0.3s;
+}
+
+.left-out {
+  -webkit-animation: animation-left-out 0.3s;
+          animation: animation-left-out 0.3s;
+}
+/*# sourceMappingURL=style.css.map */
